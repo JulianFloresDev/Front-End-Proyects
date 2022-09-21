@@ -4,7 +4,6 @@
     --secondary-grey-color: #6c7289;
     --button-bg-color: #3c8067;
     --primary-bg-color: #f2ebe3;
-
 }
 
 .cards-container {
@@ -100,6 +99,7 @@
 .card .card-content .card-main .card-button{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: .4em;
     width: 100%;
     padding: 1em;
@@ -107,11 +107,15 @@
     font-weight: 700;
     color: var(--primary-white-color);
     background-color: var(--button-bg-color);
+    cursor: pointer;
     opacity: .85;
     transition: opacity .2s linear;
 }
 .card .card-content .card-main .card-button:hover {
     opacity: 1;
+}
+.card .card-content .card-main .card-button .cart-icon{
+    font-size: 1em;
 }
 
 @media screen and (min-width: 1440px) {

@@ -1,0 +1,16 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap'); */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 1.5em;
+    background-color: #1c232b;
+}
+
+.principal-title{
+    color: #f2ebe3;
+    font-family: 'Montserrat';
+    font-size: 2em;
+    letter-spacing: -2px;
+}
