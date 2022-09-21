@@ -15,7 +15,7 @@
     gap: 1em;
 
     width: 100vw;
-    height: 100vh;
+    padding: 2em;
     background-color: var(--primary-bg-color);
 
     font-family: 'Montserrat', 'Fraunces', sans-serif;
@@ -47,9 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-between; */
     gap: 1em;
-    height: 28em;
     padding: 1.5em;
     border-radius: 0px 0px 10px 10px;
 }
@@ -71,6 +69,49 @@
     color: var(--primary-black-color);
     font-size: 2.2em;
     font-family: 'Fraunces';
+}
+
+.card .card-content .card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.card .card-content .card-main .card-description {
+    color: var(--secondary-grey-color);
+    line-height: 150%;
+}
+.card .card-content .card-main .card-price-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.card .card-content .card-main .card-price-container .card-price{
+    color: var(--button-bg-color);
+    font-family: 'Fraunces';
+    font-size: 2em;
+}
+.card .card-content .card-main .card-price-container .card-price-old{
+    color: var(--secondary-grey-color);
+    text-decoration: line-through;
+}
+
+.card .card-content .card-main .card-button{
+    display: flex;
+    justify-content: center;
+    gap: .4em;
+    width: 100%;
+    padding: 1em;
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--primary-white-color);
+    background-color: var(--button-bg-color);
+    opacity: .85;
+    transition: opacity .2s linear;
+}
+.card .card-content .card-main .card-button:hover {
+    opacity: 1;
 }
 
 @media screen and (min-width: 1440px) {
