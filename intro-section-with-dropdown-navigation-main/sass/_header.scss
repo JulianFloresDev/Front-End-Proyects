@@ -1,0 +1,106 @@
+body {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        padding: 2rem;
+        width: 100vw;
+
+        &-burger-menu {
+            flex: 0 1 2.5rem;
+            display: flex;
+            gap: .5rem;
+            flex-direction: column;
+
+            .second-line {
+                width: 100%;
+                display: flex;
+
+            }
+
+            .menu-item {
+                display: inline-block;
+                width: 100%;
+                height: 3px;
+                background-color: var(--primary-color-black);
+            }
+        }
+
+        &-logo {
+            flex: 0;
+
+            #header-logo-anchor {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+
+        &-nav {
+            display: none;
+            flex: 1 0 auto;
+            justify-content: space-between;
+            padding: 1rem;
+
+
+            &-container,
+            &-sign {
+                display: flex;
+                gap: 1rem;
+                font-weight: 700;
+            }
+
+            &-container {
+
+                .nav-item {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    padding: .5rem;
+                    color: var(--primary-color-grey);
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--primary-color-black)
+                    }
+
+                    .arrow-down {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+
+            }
+
+            &-sign {
+                .register-btn {
+                    color: var(--primary-color-grey);
+                    padding: 1rem 1.5rem;
+
+                    &:hover {
+                        color: var(--primary-color-black)
+                    }
+
+                    &#register-btn:hover {
+                        border-radius: 20px;
+                        border: 2px solid var(--primary-color-black);
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        .header {
+            justify-content: flex-start;
+
+            &-burger-menu {
+                display: none;
+            }
+
+            &-nav {
+                display: flex;
+            }
+        }
+    }
+}
