@@ -1,31 +1,11 @@
 body {
     .header {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 4rem;
-        padding: 2rem;
-        width: 100vw;
-
-        &-burger-menu {
-            flex: 0 1 2.5rem;
-            display: flex;
-            gap: .5rem;
-            flex-direction: column;
-
-            .second-line {
-                width: 100%;
-                display: flex;
-
-            }
-
-            .menu-item {
-                display: inline-block;
-                width: 100%;
-                height: 3px;
-                background-color: var(--primary-color-black);
-            }
-        }
+        padding: 1rem;
 
         &-logo {
             flex: 0;
@@ -37,55 +17,177 @@ body {
         }
 
         &-nav {
-            display: none;
-            flex: 1 0 auto;
-            justify-content: space-between;
-            padding: 1rem;
+            position: relative;
+            display: flex;
+            flex: 0 1 auto;
+            // padding: 1rem;
 
-
-            &-container,
-            &-sign {
+            &-burger-menu {
                 display: flex;
-                gap: 1rem;
-                font-weight: 700;
+                gap: .5rem;
+                flex-direction: column;
+                width: 2rem;
+                cursor: pointer;
+
+                .menu-item {
+                    display: inline-block;
+                    width: 100%;
+                    height: 3px;
+                    background-color: var(--primary-color-black);
+                    transition: transform .2s linear;
+
+                    &.active:nth-of-type(1) {
+                        transform: translateY(.65rem) rotateZ(45deg);
+                    }
+
+                    &.active:nth-of-type(2) {
+                        transform: translateY(-.65rem) rotateZ(-45deg);
+                    }
+                }
+
+                .second-line {
+                    width: 100%;
+                    display: flex;
+                    overflow: hidden;
+
+                    .menu-item.active:nth-of-type(1) {
+                        transform: translateX(-1.5rem);
+                    }
+
+                    .menu-item.active:nth-of-type(2) {
+                        transform: translateX(1.5rem);
+                    }
+                }
+
             }
 
             &-container {
+                display: none;
+                gap: 1.5rem;
+                font-weight: 700;
 
-                .nav-item {
+                &-items {
                     display: flex;
-                    align-items: center;
-                    gap: .5rem;
-                    padding: .5rem;
-                    color: var(--primary-color-grey);
-                    cursor: pointer;
+                    justify-content: space-between;
+                    gap: 1rem;
 
-                    &:hover {
-                        color: var(--primary-color-black)
-                    }
+                    .nav-item {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: .5rem;
+                        padding: .5rem;
 
-                    .arrow-down {
-                        font-size: 20px;
-                        font-weight: 700;
+                        color: var(--primary-color-grey);
+                        cursor: pointer;
+
+                        &-title {
+                            display: flex;
+                            gap: .5rem;
+                        }
+
+                        &-deploy {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            right: 0;
+                            flex-direction: column;
+                            gap: 1.5rem;
+                            padding: 1.5rem;
+
+                            background-color: var(--pure-wite);
+
+                            &-element {
+                                display: flex;
+                                gap: 1rem;
+                                cursor: pointer;
+                            }
+                        }
+
+                        &-deploy.active {
+                            display: flex;
+                        }
+
+                        .arrow-down {
+                            font-size: 20px;
+                            font-weight: 700;
+                            transition: .2s linear;
+
+                            &.active {
+                                transform: rotateZ(180deg);
+                            }
+                        }
+
+                        &-text {
+                            &:hover {
+                                color: var(--primary-color-black)
+                            }
+                        }
                     }
                 }
 
+                &-sign {
+                    display: flex;
+                    gap: 1rem;
+                    font-weight: 700;
+
+                    .register-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--primary-color-grey);
+                        padding: 1rem 1.5rem;
+
+                        &:hover {
+                            color: var(--primary-color-black)
+                        }
+
+                        &#register-btn {
+                            border-radius: 20px;
+                            border: 2px solid var(--primary-color-grey);
+
+                            &:hover {
+                                border-color: var(--primary-color-black);
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100vh;
+                    width: 14rem;
+                    padding: 1.5rem;
+                    background-color: var(--pure-wite);
+
+                    .header-nav-container-items,
+                    .header-nav-container-sign {
+                        flex-direction: column;
+                    }
+
+                    .header-nav-container-items {
+                        .nav-item {
+                            &-deploy.active {
+                                position: initial;
+                            }
+                        }
+                    }
+                }
             }
+            &.active{
+                position: absolute;
+                top: 0;
+                right: 0;
+                justify-content: flex-end;
+                padding: 1rem;
+                width: 14rem;
+                background-color: var(--pure-wite);
 
-            &-sign {
-                .register-btn {
-                    color: var(--primary-color-grey);
-                    padding: 1rem 1.5rem;
-
-                    &:hover {
-                        color: var(--primary-color-black)
-                    }
-
-                    &#register-btn:hover {
-                        border-radius: 20px;
-                        border: 2px solid var(--primary-color-black);
-                    }
-                }
             }
         }
     }
@@ -94,13 +196,30 @@ body {
         .header {
             justify-content: flex-start;
 
-            &-burger-menu {
-                display: none;
+            &-nav {
+                flex: 1 1 auto;
+
+                &-burger-menu {
+                    display: none;
+                }
+
+                &-container {
+                    flex: 1 1 auto;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    &-items {
+                        .nav-item {
+                            &-deploy.active {
+                                border-radius: 1rem;
+                                box-shadow: 0px 0px 20px 5px rgba(75, 75, 75, 0.25);
+                            }
+                        }
+                    }
+                }
             }
 
-            &-nav {
-                display: flex;
-            }
         }
     }
 }
