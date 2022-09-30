@@ -17,11 +17,20 @@ burgerMenuContent.addEventListener('click', () => {
 
     //* Acces to 'header-nav' to apply styles
     burgerMenuContent.parentNode.classList.toggle('active');
-})
+});
 //! Show scrolleable components
 navElementWithDropdown.forEach(element => {
     element.addEventListener('click', () => {
         element.lastElementChild.classList.toggle('active');
         element.nextElementSibling.classList.toggle('active');
     });
+});
+
+//! To avoid problems with 'active' class if you resize the page for any intention.
+window.addEventListener('resize', () => {
+    if (window.innerWidth) {
+        document.querySelectorAll('.active').forEach(element => {
+            element.classList.remove('active');
+        })
+    }
 });

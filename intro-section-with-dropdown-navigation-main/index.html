@@ -94,12 +94,25 @@
 	</header>
 	<main class="flex-container">
 		<section class="flex-item section section-hero">
-			<article class="hero-image">
-				<picture class="img-container">
-					<source srcset="./images/image-hero-desktop.png" media="(min-width: 1440px)">
-					<img src="./images/image-hero-mobile.png" alt="Logo Image - Work with us!">
-				</picture>
-			</article>
+			<picture class="flex-item-img-container">
+				<source srcset="./images/image-hero-desktop.png" media="(min-width: 1440px)">
+				<img src="./images/image-hero-mobile.png" alt="Logo Image - Work with us!">
+			</picture>
+			<div class="flex-item-hero">
+				<h1 id="principal-title" class="flex-item-hero-title">Make remote work</h1>
+				<p class="flex-item-hero-text">
+					Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+				</p>
+				<a href="#" class="flex-item-hero-button">
+					Learn more
+				</a>
+				<div class="flex-item-hero-partners">
+					<img src="./images/client-databiz.svg" alt="">
+					<img src="./images/client-audiophile.svg" alt="">
+					<img src="./images/client-meet.svg" alt="">
+					<img src="./images/client-maker.svg" alt="">
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer class="attribution">
@@ -110,4 +123,5 @@
 	</footer>
 	<script src="./js/app.js"></script>
 </body>
+
 </html>

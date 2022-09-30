@@ -2,7 +2,7 @@
 :root {
   --primary-color-black: rgb(20, 20, 20);
   --primary-color-grey: rgb(105, 105, 105);
-  --primary-color-wite: rgb(250, 250, 250);
+  --primary-color-white: rgb(250, 250, 250);
   --pure-wite: rgb(255, 255, 255);
 }
 
@@ -113,6 +113,9 @@ body .header-nav-container-items .nav-item-deploy-element {
   gap: 1rem;
   cursor: pointer;
 }
+body .header-nav-container-items .nav-item-deploy-element .nav-item-text {
+  flex: 1 0 auto;
+}
 body .header-nav-container-items .nav-item-deploy.active {
   display: flex;
 }
@@ -203,11 +206,48 @@ body .header-nav.active {
   align-items: center;
   justify-content: center;
 }
-.flex-container .img-container {
+.flex-container .flex-item {
+  width: 100vw;
+}
+.flex-container .flex-item-img-container {
   width: 100%;
 }
-.flex-container .img-container img {
+.flex-container .flex-item-img-container img {
   width: 100%;
+}
+.flex-container .flex-item-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.flex-container .flex-item-hero-title {
+  font-size: 1.9rem;
+}
+.flex-container .flex-item-hero-text {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--primary-color-grey);
+}
+.flex-container .flex-item-hero-button {
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  background-color: var(--primary-color-black);
+  color: var(--primary-color-white);
+}
+.flex-container .flex-item-hero-button:hover {
+  border: 2px solid var(--primary-color-black);
+  background-color: var(--primary-color-white);
+  color: var(--primary-color-black);
+}
+.flex-container .flex-item-hero-partners {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */

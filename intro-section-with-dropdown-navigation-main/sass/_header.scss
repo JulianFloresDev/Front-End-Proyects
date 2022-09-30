@@ -102,6 +102,10 @@ body {
                                 display: flex;
                                 gap: 1rem;
                                 cursor: pointer;
+
+                                .nav-item-text {
+                                    flex: 1 0 auto;
+                                }
                             }
                         }
 
@@ -179,7 +183,8 @@ body {
                     }
                 }
             }
-            &.active{
+
+            &.active {
                 position: absolute;
                 top: 0;
                 right: 0;
