@@ -29,7 +29,7 @@ body .header {
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  padding: 1rem;
+  padding: 1.5rem 2.5rem;
 }
 body .header-logo {
   flex: 0;
@@ -202,15 +202,17 @@ body .header-nav.active {
 
 .flex-container {
   display: flex;
+}
+.flex-container .flex-item {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-.flex-container .flex-item {
+  gap: 1rem;
   width: 100vw;
 }
 .flex-container .flex-item-img-container {
-  width: 100%;
+  flex: 1 1 100%;
 }
 .flex-container .flex-item-img-container img {
   width: 100%;
@@ -221,7 +223,6 @@ body .header-nav.active {
   align-items: center;
   gap: 1.5rem;
   padding: 1rem;
-  margin-top: 1rem;
 }
 .flex-container .flex-item-hero-title {
   font-size: 1.9rem;
@@ -248,6 +249,46 @@ body .header-nav.active {
 .flex-container .flex-item-hero-partners {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.flex-container .flex-item-hero-partners img {
+  flex: 0 1 20%;
+  height: fit-content;
+}
+
+@media screen and (min-width: 1440px) {
+  .flex-container .flex-item {
+    justify-content: space-evenly;
+  }
+  .flex-container .flex-item-img-container {
+    order: 2;
+    flex: 0 1 35%;
+  }
+  .flex-container .flex-item-img-container img {
+    width: 100%;
+  }
+  .flex-container .flex-item-hero {
+    flex: 0 1 40%;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .flex-container .flex-item-hero-title {
+    font-size: 4.5rem;
+  }
+  .flex-container .flex-item-hero-text {
+    text-align: start;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+  }
+  .flex-container .flex-item-hero-partners {
+    margin-top: 2.5rem;
+  }
+  .flex-container .flex-item-hero-partners img {
+    height: fit-content;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
