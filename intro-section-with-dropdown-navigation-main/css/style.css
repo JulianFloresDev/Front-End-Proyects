@@ -290,5 +290,19 @@ body .header-nav.active {
     height: fit-content;
   }
 }
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  margin-top: 3.5rem;
+  color: #f2ebe3;
+  background-color: #1c232b;
+}
+
+.attribution a {
+  color: #6c7289;
+}
 
 /*# sourceMappingURL=style.css.map */
