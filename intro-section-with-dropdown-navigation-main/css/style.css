@@ -81,7 +81,6 @@ body .header-nav-container {
 }
 body .header-nav-container-items {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
 }
 body .header-nav-container-items .nav-item {
