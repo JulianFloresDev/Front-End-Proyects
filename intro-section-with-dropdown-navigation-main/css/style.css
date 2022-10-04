@@ -178,7 +178,7 @@ body .header-nav.active {
   width: 14rem;
   background-color: var(--pure-wite);
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 880px) {
   body .header {
     justify-content: flex-start;
   }
@@ -257,7 +257,7 @@ body .header-nav.active {
   height: fit-content;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 880px) {
   .flex-container .flex-item {
     justify-content: space-evenly;
   }
