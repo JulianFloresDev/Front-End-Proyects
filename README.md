@@ -1,7 +1,7 @@
 # Practice Front-End-Proyects
 ---
 ### Space dedicated to demonstrate my Front-End skills through challenges on the 'frontendMentor' page.
-###All the challenges were done without having access to the Figma of the design.
+### All the challenges were done without having access to the Figma of the design.
 
 | Project Link | Desciption | Tools |
 |--------------|------------|-------|
