@@ -22,6 +22,9 @@
   ],
   "rules": {
       "semi": [2, "always"],
+      "eqeqeq": "off",
+      "curly": "error",
+      "indent": ["warn", 2],
       "react/react-in-jsx-scope": "off",
       "prettier/prettier": [
           "error",
