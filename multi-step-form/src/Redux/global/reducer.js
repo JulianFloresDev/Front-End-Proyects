@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { SET_FORM_STEP } from './constants';
 
 const INITIAL_STATE = {
@@ -9,7 +10,7 @@ const globalReducer = (state = INITIAL_STATE, action) => {
     case SET_FORM_STEP:
       return {
         ...state,
-        step: action.paylaod
+        step: action.payload
       };
     default:
       return state;
