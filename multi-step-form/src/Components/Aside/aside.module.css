@@ -1,0 +1,102 @@
+.aside {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  font-weight: 600;
+}
+
+.aside,
+.aside picture,
+.aside picture source,
+.aside picture img{
+  width: 100%;
+  border-radius: 0;
+}
+
+.aside .stepNumbersContainer {
+  position: absolute;
+  top: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.pageInfo {
+  display: flex;
+}
+
+.number,
+.activePage {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-blue-light);
+}
+.number {
+  background-color: transparent;
+  color: var(--color-grey-magnolia);
+}
+.activePage {
+  background-color: var(--color-blue-light);
+  color: var(--color-blue-marine);
+}
+
+.column {
+  display: none;
+  text-transform: uppercase;
+}
+.column p {
+  font-weight: 100;
+  font-size: .9rem;
+  color: var(--color-grey-light);
+}
+.column h6 {
+  font-weight: 600;
+  font-size: .9rem;
+  letter-spacing: 1.5px;
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 1440px) {
+  .aside .stepNumbersContainer {
+    top: 5%;
+    left: 10%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .aside picture source,
+  .aside picture img{
+    width: fit-content;
+  }
+
+  .aside,
+  .aside picture,
+  .aside picture source,
+  .aside picture img{
+    border-radius: var(--border-radius-img);
+  }
+
+  .pageInfo {
+    align-items: center;
+    gap: 20px;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .column h6 {
+    text-transform: uppercase;
+  }
+}

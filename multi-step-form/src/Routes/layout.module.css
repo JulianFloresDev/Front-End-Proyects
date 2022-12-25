@@ -1,3 +1,31 @@
-.mainTitle {
-  color: var(--color-blue-marine)
+.fullcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--color-grey-magnolia);
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+@media screen and (min-width: 1440px) {
+  .fullcontainer{
+    align-items: center;
+  }
+
+  .mainContainer {
+    width: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+  }
 }

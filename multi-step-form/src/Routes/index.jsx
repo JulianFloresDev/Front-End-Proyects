@@ -1,10 +1,13 @@
 import styles from './layout.module.css';
+import Aside from 'Components/Aside';
 
 const Layout = () => {
   return (
-    <main>
-      <h1 className={styles.mainTitle}>Multi Steps Form App</h1>
-    </main>
+    <div className={styles.fullcontainer}>
+      <main className={styles.mainContainer}>
+        <Aside />
+      </main>
+    </div>
   );
 };
 
