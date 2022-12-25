@@ -64,8 +64,14 @@
   letter-spacing: 1.5px;
   color: var(--color-white);
 }
+.number,
+.activePage,
+.column h6,
+.column p {
+  cursor: pointer;
+}
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .aside .stepNumbersContainer {
     top: 5%;
     left: 10%;

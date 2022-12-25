@@ -15,7 +15,7 @@ const Aside = () => {
       <picture>
         <source
           srcSet={`${process.env.PUBLIC_URL}/assets/images/bg-sidebar-mobile.svg`}
-          media="(max-width: 1440px)"
+          media="(max-width: 768px)"
         />
         <img src={`${process.env.PUBLIC_URL}/assets/images/bg-sidebar-desktop.svg`} />
       </picture>
