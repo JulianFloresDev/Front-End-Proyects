@@ -1,8 +1,10 @@
 import styles from './aside.module.css';
+import { useSelector } from 'react-redux';
 
 const Aside = () => {
+  const { step } = useSelector((state) => state.global);
   return (
-    <div className={styles.aside}>
+    <aside className={styles.aside}>
       <picture>
         <source
           srcSet={`${process.env.PUBLIC_URL}/assets/images/bg-sidebar-mobile.svg`}
@@ -10,37 +12,57 @@ const Aside = () => {
         />
         <img src={`${process.env.PUBLIC_URL}/assets/images/bg-sidebar-desktop.svg`} />
       </picture>
-      <div className={styles.stepNumbersContainer}>
+      <nav className={styles.stepNumbersContainer}>
         <div className={styles.pageInfo}>
-          <div className={styles.activePage}>1</div>
+          <a
+            href={`${process.env.PUBLIC_URL}/form/step-${step}`}
+            className={step === 1 ? styles.activePage : styles.number}
+          >
+            1
+          </a>
           <div className={styles.column}>
             <p>step 1</p>
             <h6>your info</h6>
           </div>
         </div>
         <div className={styles.pageInfo}>
-          <div className={styles.number}>2</div>
+          <a
+            href={`${process.env.PUBLIC_URL}/form/step-${step}`}
+            className={step === 2 ? styles.activePage : styles.number}
+          >
+            2
+          </a>
           <div className={styles.column}>
             <p>step 2</p>
             <h6>select plan</h6>
           </div>
         </div>
         <div className={styles.pageInfo}>
-          <div className={styles.number}>3</div>
+          <a
+            href={`${process.env.PUBLIC_URL}/form/step-${step}`}
+            className={step === 3 ? styles.activePage : styles.number}
+          >
+            3
+          </a>
           <div className={styles.column}>
             <p>step 3</p>
             <h6>add-ons</h6>
           </div>
         </div>
         <div className={styles.pageInfo}>
-          <div className={styles.number}>4</div>
+          <a
+            href={`${process.env.PUBLIC_URL}/form/step-${step}`}
+            className={step === 4 ? styles.activePage : styles.number}
+          >
+            4
+          </a>
           <div className={styles.column}>
             <p>step 4</p>
             <h6>summary</h6>
           </div>
         </div>
-      </div>
-    </div>
+      </nav>
+    </aside>
   );
 };
 
