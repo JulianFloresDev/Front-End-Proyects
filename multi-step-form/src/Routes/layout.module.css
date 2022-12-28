@@ -29,7 +29,7 @@
   top: 100px;
 
   flex: 1 1 100%;
-  margin: 0 5%;
+  margin: 0 7.5%;
   background: transparent;
 }
 
@@ -40,12 +40,13 @@
 
   .mainContainer {
     flex-direction: row;
-    width: fit-content;
+    max-width: 70%;
     padding: 15px;
     border-radius: 15px;
   }
 
   .formContainer {
-    position: relative;
+    position: initial;
+    height: 568px;
   }
 }
