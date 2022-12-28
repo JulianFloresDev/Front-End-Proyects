@@ -2,12 +2,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
 
   font-weight: 600;
 }
 
-.aside,
 .aside picture,
 .aside picture source,
 .aside picture img{

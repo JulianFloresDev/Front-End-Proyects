@@ -1,0 +1,40 @@
+.formContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 30px 25px;
+
+  border-radius: var(--border-radius-img);
+  background-color: var(--color-grey-alabaster);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.info h2,
+.info p {
+  flex: 1 0 100%;
+}
+.info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-blue-marine);
+}
+.info p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-grey-cool);
+}
+
+@media screen and (min-width: 768px) {
+  .formContainer {
+    flex: 1 1 100%;
+    background-color: var(--color-gre-magnolia);
+  }
+}
