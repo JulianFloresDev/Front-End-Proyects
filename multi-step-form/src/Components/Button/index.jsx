@@ -3,14 +3,14 @@ import styles from './button.module.css';
 const Button = ({ type, variant, action, children }) => {
   return (
     <button
-      type={type}
-      className={styles[variant]}
+      type={type || 'button'}
+      className={styles[variant] || styles.basic}
       onClick={(e) => {
         e.preventDefault();
         action();
       }}
     >
-      {children}
+      {children || 'Button'}
     </button>
   );
 };

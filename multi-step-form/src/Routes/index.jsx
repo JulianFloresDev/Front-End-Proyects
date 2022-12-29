@@ -6,9 +6,7 @@ const Layout = () => {
     <div className={styles.fullcontainer}>
       <main className={styles.mainContainer}>
         <Aside />
-        <div className={styles.formContainer}>
-          <Form />
-        </div>
+        <Form />
       </main>
     </div>
   );

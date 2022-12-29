@@ -1,0 +1,25 @@
+.basic {
+  padding: .7rem 1.2rem;
+
+  background-color: var(--color-blue-marine);
+  border-radius: var(--border-radius-button);
+  border: none;
+  outline: none;
+
+  color: var(--color-blue-light);
+  font-size: .9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.basic:hover {
+  background-color: var(--color-blue-purplish);
+}
+
+@media screen and (min-width: 768px) {
+  .basic {
+    padding: .7rem 1.5rem;
+    border-radius: 8px;
+  }
+}

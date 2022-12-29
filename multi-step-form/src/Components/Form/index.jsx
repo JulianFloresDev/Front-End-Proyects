@@ -1,14 +1,14 @@
 import styles from './form.module.css';
-import { Input } from 'Components';
+import { Input, Button } from 'Components';
 
 const Form = () => {
   return (
     <div className={styles.formContainer}>
-      <div className={styles.info}>
-        <h2>Personal info</h2>
-        <p>Please provide your name, email address, and phone number.</p>
-      </div>
       <form className={styles.form}>
+        <div className={styles.info}>
+          <h2>Personal info</h2>
+          <p>Please provide your name, email address, and phone number.</p>
+        </div>
         <Input type={'text'} name={'name'} label={'Name'} placeholder={'e.g. Stephen King'} />
         <Input
           type={'email'}
@@ -23,6 +23,9 @@ const Form = () => {
           placeholder={'e.g. +1 234 567 890'}
         />
       </form>
+      <div className={styles.buttonContainer}>
+        <Button type>Next Step</Button>
+      </div>
     </div>
   );
 };
