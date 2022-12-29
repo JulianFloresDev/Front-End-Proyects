@@ -1,6 +1,5 @@
 import styles from './layout.module.css';
-import Aside from 'Components/Aside';
-import Form from 'Components/Form';
+import { Aside, Form } from 'Components';
 
 const Layout = () => {
   return (

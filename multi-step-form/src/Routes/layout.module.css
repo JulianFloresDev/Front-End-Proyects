@@ -13,7 +13,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: relative;
 
   width: 100%;
@@ -22,14 +21,13 @@
 
 .formContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
 
   position: absolute;
   top: 100px;
 
-  flex: 1 1 100%;
-  margin: 0 7.5%;
+  max-width: 345px;
+  margin: 0 auto;
   background: transparent;
 }
 
@@ -40,13 +38,17 @@
 
   .mainContainer {
     flex-direction: row;
+    justify-content: initial;
     max-width: 70%;
     padding: 15px;
     border-radius: 15px;
   }
 
   .formContainer {
+    flex: 1 1 100%;
+    max-width: 60%;
     position: initial;
+    align-items: flex-start;
     height: 568px;
   }
 }
