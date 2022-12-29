@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 .info h2,
@@ -40,7 +40,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 @media screen and (min-width: 768px) {
