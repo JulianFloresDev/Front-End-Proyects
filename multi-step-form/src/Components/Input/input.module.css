@@ -8,9 +8,14 @@
   width: 100%;
 }
 
+.labelContainer {
+  flex: 1 1 100%;
+  display: flex;
+}
+
 .label,
 .input {
-  flex: 1 0 100%;
+  flex: 1 1 100%;
   cursor: pointer;
 }
 
@@ -18,6 +23,16 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-blue-marine);
+}
+
+.error {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-red-straqberry);
 }
 
 .input {
