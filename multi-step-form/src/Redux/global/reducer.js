@@ -1,41 +1,47 @@
 /* eslint-disable indent */
-import { SET_FORM_STEP } from './constants';
+import { SET_FORM_STEP, SET_PERSONAL_INFO, SET_PLAN_INFO, SET_ADD_INFO } from './constants';
 
 const INITIAL_STATE = {
   step: 1,
-  info: {
-    personal: {
-      name: '',
-      email: '',
-      phone: ''
+  personalInfo: {
+    name: '',
+    email: '',
+    phone: ''
+  },
+  planInfo: {
+    monthly: true,
+    yearly: false,
+    arcade: {
+      active: false,
+      monthly: 9,
+      yearly: 90
     },
-    plan: {
-      arcade: {
-        active: false,
-        cost: 9
-      },
-      advanced: {
-        active: false,
-        cost: 12
-      },
-      pro: {
-        active: false,
-        cost: 15
-      }
+    advanced: {
+      active: false,
+      monthly: 12,
+      yearly: 120
     },
-    addOns: {
-      serviceOnline: {
-        active: false,
-        cost: 1
-      },
-      storage: {
-        active: false,
-        cost: 2
-      },
-      customProfile: {
-        active: false,
-        cost: 2
-      }
+    pro: {
+      active: false,
+      monthly: 15,
+      yearly: 150
+    }
+  },
+  addInfo: {
+    serviceOnline: {
+      active: false,
+      monthly: 2,
+      yearly: 10
+    },
+    storage: {
+      active: false,
+      monthly: 2,
+      yearly: 20
+    },
+    customProfile: {
+      active: false,
+      monthly: 2,
+      yearly: 20
     }
   }
 };
@@ -46,6 +52,51 @@ const globalReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         step: action.payload
+      };
+    case SET_PERSONAL_INFO:
+      return {
+        ...state,
+        personalInfo: { ...action.payload }
+      };
+    case SET_PLAN_INFO:
+      return {
+        ...state,
+        planInfo: {
+          ...state.planInfo,
+          monthly: action.payload.plan,
+          yearly: !action.payload.plan,
+          arcade: {
+            ...state.planInfo.arcade,
+            active: action.payload.arcade
+          },
+          advanced: {
+            ...state.planInfo.advanced,
+            active: action.payload.advanced
+          },
+          pro: {
+            ...state.planInfo.pro,
+            active: action.payload.pro
+          }
+        }
+      };
+    case SET_ADD_INFO:
+      return {
+        ...state,
+        addInfo: {
+          ...state.addInfo,
+          serviceOnline: {
+            ...state.addInfo.serviceOnline,
+            active: action.payload.serviceOnline
+          },
+          storage: {
+            ...state.addInfo.storage,
+            active: action.payload.storage
+          },
+          customProfile: {
+            ...state.addInfo.customProfile,
+            active: action.payload.customProfile
+          }
+        }
       };
     default:
       return state;
