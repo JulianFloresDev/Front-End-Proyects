@@ -1,7 +1,8 @@
 import styles from './form.module.css';
 import { useForm } from 'react-hook-form';
 import { useSelector, useDispatch } from 'react-redux';
-import { Input, Button } from 'Components';
+import { FormStep1, FormStep2, FormStep3, FormStep4 } from './steps';
+import { Button } from 'Components';
 import { setFormStep } from 'Redux/global/actions';
 
 const Form = () => {
@@ -18,40 +19,24 @@ const Form = () => {
     dispatch(setFormStep(step + 1));
   };
 
+  const goBack = () => {
+    dispatch(setFormStep(step - 1));
+  };
+
   return (
     <form className={styles.form} onSubmit={handleSubmit(showData)}>
       <div className={styles.formContainer}>
-        <div className={styles.info}>
-          <h2>Personal info</h2>
-          <p>Please provide your name, email address, and phone number.</p>
-        </div>
-        <Input
-          type={'text'}
-          name={'name'}
-          label={'Name'}
-          placeholder={'e.g. Stephen King'}
-          register={register}
-          error={errors}
-        />
-        <Input
-          type={'email'}
-          name={'email'}
-          label={'Email Adress'}
-          placeholder={'e.g. stephenking@lorem.com'}
-          register={register}
-          error={errors}
-        />
-        <Input
-          type={'tel'}
-          name={'phone'}
-          label={'Phone Number'}
-          placeholder={'e.g. +1 234 567 890'}
-          register={register}
-          error={errors}
-        />
+        {step === 1 && <FormStep1 errors={errors} register={register} />}
+        {step === 2 && <FormStep2 errors={errors} register={register} />}
+        {step === 3 && <FormStep3 errors={errors} register={register} />}
+        {step === 4 && <FormStep4 errors={errors} register={register} />}
       </div>
       <div className={styles.buttonContainer}>
-        {step !== 1 && <Button>Go Back</Button>}
+        {step !== 1 && (
+          <Button type={'button'} variant={'basic'} action={goBack}>
+            Go Back
+          </Button>
+        )}
         <Button type={'submit'} variant={'blue'}>
           {step !== 4 ? 'Next Step' : 'Confirm'}
         </Button>
