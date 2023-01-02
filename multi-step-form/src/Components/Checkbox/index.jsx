@@ -1,7 +1,7 @@
 import styles from './checkbox.module.css';
 import { useSelector } from 'react-redux';
 
-const Checkbox = ({ src, name, register }) => {
+const Checkbox = ({ src, name, register, registerName }) => {
   const { planInfo } = useSelector((store) => store.global);
   const { yearly, arcade, advanced, pro } = planInfo;
   return (
@@ -18,14 +18,7 @@ const Checkbox = ({ src, name, register }) => {
         </p>
         {yearly ? <p className={styles.promotion}>2 months free</p> : null}
       </div>
-      <input
-        id={name}
-        name={name}
-        type={'checkbox'}
-        value={name === 'arcade' ? true : false}
-        className={styles.inputRadio}
-        {...register(name)}
-      />
+      <input id={name} type={'radio'} className={styles.inputRadio} {...register(registerName)} />
     </label>
   );
 };

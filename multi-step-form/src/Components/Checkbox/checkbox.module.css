@@ -16,8 +16,8 @@
   border-color: var(--color-blue-purplish);
 }
 
-.container:has(input[type='checkbox']:checked) {
-  background-color: var(--color-grey-magnolia);
+.container:has(input[type='radio']:checked) {
+  background-color: var(--color-grey-alabaster);
   border-color: var(--color-blue-purplish);
 }
 
@@ -49,7 +49,7 @@
   color: var(--color-blue-marine);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1300px) {
   .container {
     flex: 1 1 30%;
     gap: 50px;

@@ -1,5 +1,11 @@
 /* eslint-disable indent */
-import { SET_FORM_STEP, SET_PERSONAL_INFO, SET_PLAN_INFO, SET_ADD_INFO } from './constants';
+import {
+  SET_FORM_STEP,
+  SET_PERSONAL_INFO,
+  SET_PLAN_TYPE,
+  SET_PLAN_INFO,
+  SET_ADD_INFO
+} from './constants';
 
 const INITIAL_STATE = {
   step: 1,
@@ -10,9 +16,9 @@ const INITIAL_STATE = {
   },
   planInfo: {
     monthly: true,
-    yearly: true,
+    yearly: false,
     arcade: {
-      active: false,
+      active: true,
       monthly: 9,
       yearly: 90
     },
@@ -58,13 +64,20 @@ const globalReducer = (state = INITIAL_STATE, action) => {
         ...state,
         personalInfo: { ...action.payload }
       };
+    case SET_PLAN_TYPE:
+      return {
+        ...state,
+        planInfo: {
+          ...state.planInfo,
+          monthly: !action.payload,
+          yearly: action.payload
+        }
+      };
     case SET_PLAN_INFO:
       return {
         ...state,
         planInfo: {
           ...state.planInfo,
-          monthly: action.payload.plan,
-          yearly: !action.payload.plan,
           arcade: {
             ...state.planInfo.arcade,
             active: action.payload.arcade

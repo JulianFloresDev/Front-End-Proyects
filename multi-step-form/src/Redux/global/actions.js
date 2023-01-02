@@ -1,4 +1,10 @@
-import { SET_FORM_STEP, SET_PERSONAL_INFO, SET_PLAN_INFO, SET_ADD_INFO } from './constants';
+import {
+  SET_FORM_STEP,
+  SET_PERSONAL_INFO,
+  SET_PLAN_TYPE,
+  SET_PLAN_INFO,
+  SET_ADD_INFO
+} from './constants';
 
 export const setFormStep = (payload) => {
   return {
@@ -10,6 +16,13 @@ export const setFormStep = (payload) => {
 export const setPersonalInfo = (payload) => {
   return {
     type: SET_PERSONAL_INFO,
+    payload
+  };
+};
+
+export const setPlanType = (payload) => {
+  return {
+    type: SET_PLAN_TYPE,
     payload
   };
 };
