@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   },
   planInfo: {
     monthly: true,
-    yearly: false,
+    yearly: true,
     arcade: {
       active: false,
       monthly: 9,

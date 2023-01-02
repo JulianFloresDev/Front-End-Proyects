@@ -79,6 +79,10 @@
     padding-top: 30px;
   }
 
+  .info {
+    margin-bottom: 20px;
+  }
+
   .info h2 {
     font-size: 1.8rem;
   }

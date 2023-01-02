@@ -3,7 +3,12 @@ import { useForm } from 'react-hook-form';
 import { useSelector, useDispatch } from 'react-redux';
 import { FormStep1, FormStep2, FormStep3, FormStep4 } from './steps';
 import { Button } from 'Components';
-import { setFormStep } from 'Redux/global/actions';
+import {
+  setFormStep
+  // setPersonalInfo,
+  // setPlanInfo,
+  // setAddInfo
+} from 'Redux/global/actions';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -15,6 +20,7 @@ const Form = () => {
   } = useForm({ node: 'onBlur' });
 
   const showData = (data) => {
+    // step === 1 && dispatch(setPersonalInfo(data));
     console.log(data);
     dispatch(setFormStep(step + 1));
   };
@@ -27,7 +33,7 @@ const Form = () => {
     <form className={styles.form} onSubmit={handleSubmit(showData)}>
       <div className={styles.formContainer}>
         {step === 1 && <FormStep1 errors={errors} register={register} />}
-        {step === 2 && <FormStep2 errors={errors} register={register} />}
+        {step === 2 && <FormStep2 register={register} />}
         {step === 3 && <FormStep3 errors={errors} register={register} />}
         {step === 4 && <FormStep4 errors={errors} register={register} />}
       </div>
