@@ -1,16 +1,11 @@
 import styles from './form.module.css';
+import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
-import formSchema from 'validations/formSchema';
-import { useSelector, useDispatch } from 'react-redux';
-import { FormStep1, FormStep2, FormStep3, FormStep4 } from './steps';
+import { setFormStep, setPersonalInfo } from 'Redux/global/actions';
 import { Button } from 'Components';
-import {
-  setFormStep,
-  setPersonalInfo
-  // setPlanInfo,
-  // setAddInfo
-} from 'Redux/global/actions';
+import { FormStep1, FormStep2, FormStep3, FormStep4 } from './steps';
+import formSchema from 'validations/formSchema';
 
 const Form = () => {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import Form from './Form';
 import Aside from './Aside';
 import Input from './Input';
 import Button from './Button';
-import Checkbox from './Checkbox';
+import InputRadio from './InputRadio';
 import BinarySelect from './BinarySelect';
 
-export { Aside, Form, Input, Button, Checkbox, BinarySelect };
+export { Aside, Form, Input, Button, InputRadio, BinarySelect };

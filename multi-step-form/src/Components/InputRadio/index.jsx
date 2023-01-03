@@ -1,8 +1,8 @@
-import styles from './checkbox.module.css';
+import styles from './inputRadio.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPlanInfo } from 'Redux/global/actions';
 
-const Checkbox = ({ src, name }) => {
+const InputRadio = ({ src, name }) => {
   const dispatch = useDispatch();
   const { planInfo } = useSelector((store) => store.global);
   const { yearly, arcade, advanced, pro } = planInfo;
@@ -37,4 +37,4 @@ const Checkbox = ({ src, name }) => {
   );
 };
 
-export default Checkbox;
+export default InputRadio;

@@ -1,5 +1,5 @@
 import styles from './form.module.css';
-import { BinarySelect, Checkbox } from 'Components';
+import { BinarySelect, InputRadio } from 'Components';
 const FormStep2 = () => {
   return (
     <>
@@ -8,9 +8,9 @@ const FormStep2 = () => {
         <p>You have the option of monthly or yearly billing.</p>
       </div>
       <fieldset id="planInfo" className={styles.fieldset}>
-        <Checkbox src={`assets/images/icon-arcade.svg`} name={'arcade'} />
-        <Checkbox src={`assets/images/icon-advanced.svg`} name={'advanced'} />
-        <Checkbox src={`assets/images/icon-pro.svg`} name={'pro'} />
+        <InputRadio src={`assets/images/icon-arcade.svg`} name={'arcade'} />
+        <InputRadio src={`assets/images/icon-advanced.svg`} name={'advanced'} />
+        <InputRadio src={`assets/images/icon-pro.svg`} name={'pro'} />
       </fieldset>
       <BinarySelect />
     </>
