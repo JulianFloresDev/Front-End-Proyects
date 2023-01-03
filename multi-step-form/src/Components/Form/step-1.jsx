@@ -1,6 +1,20 @@
 import styles from './form.module.css';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { Input } from 'Components';
-const FormStep1 = ({ errors, register }) => {
+
+const FormStep1 = ({ errors, register, reset }) => {
+  const { personalInfo } = useSelector((store) => store.global);
+  const { name, email, phone } = personalInfo;
+
+  useEffect(() => {
+    reset({
+      name: name,
+      email: email,
+      phone: phone
+    });
+  }, []);
+
   return (
     <>
       <div className={styles.info}>
