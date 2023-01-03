@@ -37,6 +37,8 @@
   width: 12px;
   height: 12px;
 
+  cursor: pointer;
+
   border-radius: 50%;
   background-color: var(--color-white);
   transition: all .2s ease-in;

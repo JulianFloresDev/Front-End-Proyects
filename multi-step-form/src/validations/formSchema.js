@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-const Step1Schema = Joi.object({
+const formSchema = Joi.object({
   name: Joi.string()
     .min(4)
     .max(30)
@@ -27,8 +27,7 @@ const Step1Schema = Joi.object({
       'string.pattern.base': 'Numbers only',
       'string.min': 'Number between 8 and 13 chars',
       'string.max': 'Number between 8 and 13 chars'
-    }),
-  planInfo: Joi.string()
+    })
 });
 
-export default Step1Schema;
+export default formSchema;

@@ -1,9 +1,11 @@
 import styles from './select.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setPlanType } from 'Redux/global/actions';
 
 const BinarySelect = () => {
   const dispatch = useDispatch();
+  const { planInfo } = useSelector((store) => store.global);
+  const { yearly } = planInfo;
 
   const changePaymentFrecuency = (data) => {
     dispatch(setPlanType(data));
@@ -16,6 +18,7 @@ const BinarySelect = () => {
         <input
           id="binarySelect"
           type="checkbox"
+          checked={yearly}
           onChange={(e) => {
             changePaymentFrecuency(e.target.checked);
           }}
