@@ -1,5 +1,7 @@
 import styles from './aside.module.css';
 import { useSelector } from 'react-redux';
+import { setFormStep } from 'Redux/global/actions';
+import store from 'Redux/store';
 
 const Aside = () => {
   const { step } = useSelector((state) => state.global);
@@ -28,7 +30,7 @@ const Aside = () => {
             <h6>select plan</h6>
           </div>
         </div>
-        <div className={styles.pageInfo}>
+        <div className={styles.pageInfo} onClick={() => store.dispatch(setFormStep(3))}>
           <span className={step === 3 ? styles.activePage : styles.number}>3</span>
           <div className={styles.column}>
             <p>step 3</p>
