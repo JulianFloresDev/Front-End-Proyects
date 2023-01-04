@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Front-End-Proyects/multi-step-form/static/css/main.4a3bc7b8.css",
+    "main.js": "/Front-End-Proyects/multi-step-form/static/js/main.237b47ca.js",
+    "index.html": "/Front-End-Proyects/multi-step-form/index.html",
+    "main.4a3bc7b8.css.map": "/Front-End-Proyects/multi-step-form/static/css/main.4a3bc7b8.css.map",
+    "main.237b47ca.js.map": "/Front-End-Proyects/multi-step-form/static/js/main.237b47ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a3bc7b8.css",
+    "static/js/main.237b47ca.js"
+  ]
+}
