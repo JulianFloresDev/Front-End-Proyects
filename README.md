@@ -6,5 +6,5 @@
 | Project Link | Desciption | Tools |
 |--------------|------------|-------|
 |[Product Card](https://julianfloresdev.github.io/Front-End-Proyects/product-preview-card-component-main/)| Project dedicated to show my skills with "flexbox-model" and responsive-design and pixel perfect design techniques. | HTML - SASS |
-|[Simple Landing Page](https://julianfloresdev.github.io/Front-End-Proyects/intro-section-with-dropdown-navigation-main/#)| Another project to show how skilled I can be in responsive and pixel perfect design.| HTML - SASS - Vanilla Javascript |
-| | | |
+|[Simple Landing Page](https://julianfloresdev.github.io/Front-End-Proyects/intro-section-with-dropdown-navigation-main/)| Another project to show how skilled I can be in responsive and pixel perfect design.| HTML - SASS - Vanilla Javascript |
+|[Multi Steps Form](https://julianfloresdev.github.io/Front-End-Proyects/multi-step-form/) | Developed with ReactJS, and the react-hook-form library to implement validations in the form fields. | ReactJS - Redux - CSS |
