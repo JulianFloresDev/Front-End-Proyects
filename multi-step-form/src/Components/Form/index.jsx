@@ -19,7 +19,7 @@ const Form = () => {
 
   const showData = (data) => {
     step === 1 && dispatch(setPersonalInfo(data));
-    dispatch(setFormStep(step + 1));
+    step !== 4 && dispatch(setFormStep(step + 1));
   };
 
   const goBack = () => {
