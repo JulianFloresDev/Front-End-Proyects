@@ -1,0 +1,59 @@
+.container {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 15px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  border-radius: var(--border-radius-img);
+  background-color: var(--color-grey-alabaster);
+}
+
+.select {
+  width: 40px;
+  height: 20px;
+  position: relative;
+
+  padding: 4px;
+
+  background-color: var(--color-blue-marine);
+  border-radius: 20px;
+}
+
+.select input {
+  display: none;
+}
+
+.select::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+  background-color: var(--color-white);
+  transition: all .2s ease-in;
+}
+
+.select:has(input[type='checkbox']:checked)::after {
+  left: calc(100% - 16px);
+}
+
+.month,
+.select:has(input[type='checkbox']:checked) ~ .year {
+  color: var(--color-blue-marine);
+}
+
+.container:has(.select > input[type='checkbox']:checked) .month,
+.select:not(:has(input[type='checkbox']:checked)) ~ .year {
+  color: var(--color-grey-cool);
+}

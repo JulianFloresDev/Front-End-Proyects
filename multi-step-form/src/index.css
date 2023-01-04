@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  --color-blue-marine: rgb(2, 41, 90);
+  --color-blue-purplish: rgb(71, 61, 255);
+  --color-blue-pastel: rgb(173, 190, 255);
+  --color-blue-light: rgb(191, 226, 253);
+  --color-red-straqberry: rgb(237, 53, 72);
+
+  --color-grey-cool: rgb(150, 153, 171);
+  --color-grey-light: rgb(214, 217, 230);
+  --color-grey-magnolia: rgb(240, 246, 255);
+  --color-grey-alabaster: rgb(250, 251, 255);
+  --color-white: rgb(255, 255, 255);
+
+  --border-radius-img: 10px;
+  --border-radius-button: 5px;
+  --border-radius-input: 5px;
+
+  --font-family-ubuntu: 'Ubuntu', sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+  font-family: var(--font-family-ubuntu);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

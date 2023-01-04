@@ -1,0 +1,75 @@
+.container {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+
+  border-radius: 8px;
+  border: .5px solid var(--color-grey-light);
+
+  cursor: pointer;
+}
+
+.info {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+
+.info h4,
+.info p {
+  flex: 1 0 100%;
+}
+
+.info h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-blue-marine);
+}
+
+.info p {
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--color-grey-cool);
+}
+
+.container span {
+  font-size: .8rem;
+  font-weight: 400;
+  color: var(--color-blue-purplish);
+}
+
+.container input[type='checkbox'] {
+  width: 2rem;
+  height: 20px;
+  margin-right: 1rem;
+
+  opacity: .5;
+  border: .5px solid var(--color-grey-light);
+  border-radius: 14px;
+}
+
+.container input[type='checkbox']:checked {
+  opacity: 1;
+}
+
+.container:has(input[type='checkbox']:checked) {
+  border-color: var(--color-blue-purplish);
+  background-color: var(--color-grey-alabaster);
+}
+
+@media screen and (min-width: 1300px) {
+  .container {
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .container input[type='checkbox'] {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0;
+  }
+}
