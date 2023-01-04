@@ -34,17 +34,23 @@ const INITIAL_STATE = {
     }
   },
   addInfo: {
-    serviceOnline: {
+    online: {
+      service: 'Online service',
+      description: 'Access to multiplayer games',
       active: false,
       monthly: 2,
       yearly: 10
     },
     storage: {
+      service: 'Large storage',
+      description: 'Extra 1TB of cloud save',
       active: false,
       monthly: 2,
       yearly: 20
     },
-    customProfile: {
+    profile: {
+      service: 'Customizable profile',
+      description: 'Custom theme on your profile',
       active: false,
       monthly: 2,
       yearly: 20
@@ -97,17 +103,9 @@ const globalReducer = (state = INITIAL_STATE, action) => {
         ...state,
         addInfo: {
           ...state.addInfo,
-          serviceOnline: {
-            ...state.addInfo.serviceOnline,
-            active: action.payload.serviceOnline
-          },
-          storage: {
-            ...state.addInfo.storage,
-            active: action.payload.storage
-          },
-          customProfile: {
-            ...state.addInfo.customProfile,
-            active: action.payload.customProfile
+          [action.payload.name]: {
+            ...state.addInfo[action.payload.name],
+            active: action.payload.state
           }
         }
       };
