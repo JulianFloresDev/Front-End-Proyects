@@ -2,7 +2,7 @@ import styles from './inputCheckbox.module.css';
 import { useDispatch } from 'react-redux';
 import { setAddInfo } from 'Redux/global/actions';
 
-const InputCheckbox = ({ name, children }) => {
+const InputCheckbox = ({ name, checked, children }) => {
   const dispatch = useDispatch();
 
   return (
@@ -10,6 +10,7 @@ const InputCheckbox = ({ name, children }) => {
       <input
         id={name}
         type="checkbox"
+        checked={checked}
         onChange={(e) => {
           dispatch(setAddInfo({ name: name, state: e.target.checked }));
         }}

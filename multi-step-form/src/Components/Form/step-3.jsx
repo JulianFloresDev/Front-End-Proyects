@@ -12,7 +12,7 @@ const FormStep3 = () => {
         <h2>Pick add-ons</h2>
         <p>Add-ons help enhance your gaming experience.</p>
       </div>
-      <InputCheckbox name={'online'}>
+      <InputCheckbox name={'online'} checked={addInfo.online.active}>
         <div className={inputStyles.info}>
           <h4>{addInfo.online.service}</h4>
           <p>{addInfo.online.description}</p>
@@ -21,7 +21,7 @@ const FormStep3 = () => {
           yearly ? 'yr' : 'mo'
         }`}</span>
       </InputCheckbox>
-      <InputCheckbox name={'storage'}>
+      <InputCheckbox name={'storage'} checked={addInfo.storage.active}>
         <div className={inputStyles.info}>
           <h4>{addInfo.storage.service}</h4>
           <p>{addInfo.storage.description}</p>
@@ -30,7 +30,7 @@ const FormStep3 = () => {
           yearly ? 'yr' : 'mo'
         }`}</span>
       </InputCheckbox>
-      <InputCheckbox name={'profile'}>
+      <InputCheckbox name={'profile'} checked={addInfo.profile.active}>
         <div className={inputStyles.info}>
           <h4>{addInfo.profile.service}</h4>
           <p>{addInfo.profile.description}</p>
