@@ -58,6 +58,92 @@
   border: none;
 }
 
+/*! Step-4 styles */
+.finalInfoContainer {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  border-radius: var(--border-radius-img);
+  background-color: var(--color-grey-alabaster);
+}
+
+.finalPlanColumn {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: .8rem;
+  border-bottom: 1px solid var(--color-grey-light);
+}
+
+.finalInfoPlan {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.finalInfoPlan h4,
+.finalPlanColumn span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-blue-marine);
+}
+
+.finalInfoPlan p {
+  text-decoration: underline;
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--color-grey-cool);
+  cursor: pointer;
+}
+
+.addInfoContainer {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.totalPriceContainer,
+.addInfoContainer li {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPriceContainer p,
+.addInfoContainer li p {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--color-grey-cool);
+}
+
+.addInfoContainer li span {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--color-blue-marine);
+}
+
+.totalPriceContainer {
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.totalPriceContainer span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-blue-purplish);
+}
+
 .buttonContainer {
   display: flex;
   justify-content: space-between;

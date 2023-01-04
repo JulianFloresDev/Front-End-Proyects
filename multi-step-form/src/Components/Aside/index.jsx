@@ -30,14 +30,14 @@ const Aside = () => {
             <h6>select plan</h6>
           </div>
         </div>
-        <div className={styles.pageInfo} onClick={() => store.dispatch(setFormStep(3))}>
+        <div className={styles.pageInfo}>
           <span className={step === 3 ? styles.activePage : styles.number}>3</span>
           <div className={styles.column}>
             <p>step 3</p>
             <h6>add-ons</h6>
           </div>
         </div>
-        <div className={styles.pageInfo}>
+        <div className={styles.pageInfo} onClick={() => store.dispatch(setFormStep(4))}>
           <span className={step === 4 ? styles.activePage : styles.number}>4</span>
           <div className={styles.column}>
             <p>step 4</p>

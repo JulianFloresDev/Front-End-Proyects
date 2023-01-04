@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 
   padding: 1rem;
 
@@ -46,6 +45,7 @@
 .container input[type='checkbox'] {
   width: 2rem;
   height: 20px;
+  margin-right: 1rem;
 
   opacity: .5;
   border: .5px solid var(--color-grey-light);
@@ -70,5 +70,6 @@
   .container input[type='checkbox'] {
     width: 1.5rem;
     height: 1.5rem;
+    margin-right: 0;
   }
 }

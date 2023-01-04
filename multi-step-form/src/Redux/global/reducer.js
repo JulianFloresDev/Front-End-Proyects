@@ -38,7 +38,7 @@ const INITIAL_STATE = {
       service: 'Online service',
       description: 'Access to multiplayer games',
       active: false,
-      monthly: 2,
+      monthly: 1,
       yearly: 10
     },
     storage: {
